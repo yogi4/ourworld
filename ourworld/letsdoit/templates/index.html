@@ -1,0 +1,12 @@
+<h1> Hi all this is the list of services</h1>
+{%  if letsdoit_poll %}
+<ul>
+    {% for poll in letsdoit_poll %}
+        <li><a href="{% url "letsdoit.views.detail" poll_id=poll.id %}">{{ poll.question }}</a></li>
+
+    {% endfor %}
+</ul>
+{% else  %}
+<p> No Polls available </p>
+{%  endif %}
+

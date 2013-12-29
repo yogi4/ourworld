@@ -1,0 +1,9 @@
+<h1> Hi all you are at the service detail </h1>
+
+
+<h1>{{ question.question}}</h1>
+<ul>
+{% for test in question.choice_set.all %}
+    <li>{{ test.choice }}</li>
+{% endfor %}
+</ul>
